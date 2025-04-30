@@ -9,7 +9,7 @@ try:
 except ImportError:
     from distutils.core import setup
 #from catmap import __version__ as version
-__version__ = "0.3.1"
+__version__ = "0.4.1"
 __python_version__ = sys.version
 
 maintainer = 'Andrew J. Medford'
@@ -39,7 +39,7 @@ requires = ['matplotlib',
             'mpmath',
             'numpy',
             'graphviz',
-            'ase' if sys.version >= '3.5' else 'ase==3.17']
+            'ase' if sys.version_info >= (3, 5) else 'ase==3.17']
 
 license = 'COPYING.txt'
 long_description = open('README.md').read()
